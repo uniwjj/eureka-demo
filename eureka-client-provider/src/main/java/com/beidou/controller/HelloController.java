@@ -16,6 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
     @GetMapping("/info")
     public String hello(@RequestParam String name) {
-        return "Hello, " + name + "!";
+        return "Hello " + name + ", from feign.";
     }
 }

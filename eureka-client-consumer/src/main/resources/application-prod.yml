@@ -7,3 +7,6 @@ eureka:
       defaultZone: http://localhost:9000/eureka/
 server:
   port: 9003
+feign:
+    hystrix:
+        enabled: true # 开启hystrix
