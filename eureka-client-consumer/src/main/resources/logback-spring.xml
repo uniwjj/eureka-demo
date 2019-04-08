@@ -11,7 +11,7 @@
 
   <!-- info级别日志 -->
   <appender name="INFO" class="ch.qos.logback.core.rolling.RollingFileAppender">
-    <File>logs/eureka-client-info.log</File>
+    <File>logs/eureka-client-provider-info.log</File>
     <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
       <level>INFO</level>
     </filter>
@@ -21,7 +21,7 @@
       <charset>UTF-8</charset>
     </encoder>
     <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-      <fileNamePattern>logs/eureka-client-info.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+      <fileNamePattern>logs/eureka-client-provider-info.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
       <maxHistory>7</maxHistory>
       <maxFileSize>128MB</maxFileSize>
       <totalSizeCap>8GB</totalSizeCap>
@@ -30,7 +30,7 @@
 
   <!-- error级别日志 -->
   <appender name="ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
-    <File>logs/eureka-client-error.log</File>
+    <File>logs/eureka-client-provider-error.log</File>
     <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
       <level>ERROR</level>
     </filter>
@@ -40,7 +40,7 @@
       <charset>UTF-8</charset>
     </encoder>
     <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-      <fileNamePattern>logs/eureka-client-error.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+      <fileNamePattern>logs/eureka-client-provider-error.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
       <maxHistory>7</maxHistory>
       <maxFileSize>128MB</maxFileSize>
       <totalSizeCap>4GB</totalSizeCap>
