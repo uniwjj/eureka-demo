@@ -1,9 +1,2 @@
+# 远程配置会将本地配置内容进行覆盖
 message: This is dev.
-
-
-spring:
-    application:
-        name: config-client
-
-server:
-    port: 9006

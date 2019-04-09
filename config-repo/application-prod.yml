@@ -1,1 +1,2 @@
+# 远程配置会将本地配置内容进行覆盖
 message: This is prod.
