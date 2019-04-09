@@ -14,9 +14,15 @@
     <name>${project.artifactId}</name>
 
     <dependencies>
+        <!-- 配置中心服务端 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-config-server</artifactId>
+        </dependency>
+        <!-- 可以不加，增加以后作为注册服务客户端提供者实现高可用 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

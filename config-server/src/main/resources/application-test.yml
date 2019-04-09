@@ -12,3 +12,9 @@ server:
   port: 9004
 #  servlet:
 #    context-path: /config-server
+
+# 注册中心配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka/ # 注册中心地址
