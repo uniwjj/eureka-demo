@@ -1,1 +1,9 @@
 message: This is dev.
+
+
+spring:
+    application:
+        name: config-client
+
+server:
+    port: 9006
