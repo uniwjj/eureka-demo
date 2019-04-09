@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 @FeignClient(name = "eureka-client-provider", fallback = HelloFeginHystrix.class)
 public interface HelloFeign {
-    @RequestMapping(value = "/hello/info", method = RequestMethod.GET)
-    String hello(@RequestParam(value = "name") String name);
+
+  @RequestMapping(value = "/hello/info", method = RequestMethod.GET)
+  String hello(@RequestParam(value = "name") String name);
 }

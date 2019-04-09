@@ -15,11 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-    @Value("${message}")
-    private String message;
+  @Value("${message}")
+  private String message;
 
-    @GetMapping("/info")
-    public String info() {
-        return message;
-    }
+  @GetMapping("/info")
+  public String info() {
+    return message;
+  }
 }

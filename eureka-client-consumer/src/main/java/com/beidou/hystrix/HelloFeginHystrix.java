@@ -12,8 +12,9 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 @Component
 public class HelloFeginHystrix implements HelloFeign {
-    @Override
-    public String hello(@RequestParam String name) {
-        return "Hello " + name + ", from hystrix.";
-    }
+
+  @Override
+  public String hello(@RequestParam String name) {
+    return "Hello " + name + ", from hystrix.";
+  }
 }

@@ -13,7 +13,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableFeignClients
 @SpringBootApplication
 public class EurekaClientConsumerApplication {
-    public static void main(String[] args) {
-        SpringApplication.run(EurekaClientConsumerApplication.class, args);
-    }
+
+  public static void main(String[] args) {
+    SpringApplication.run(EurekaClientConsumerApplication.class, args);
+  }
 }

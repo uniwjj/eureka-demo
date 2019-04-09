@@ -11,5 +11,5 @@ server:
   port: 9003
 
 feign:
-    hystrix:
-        enabled: true # 开启hystrix
+  hystrix:
+    enabled: true # 开启hystrix

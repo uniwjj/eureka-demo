@@ -18,14 +18,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/hello")
 @RestController
 public class HelloController {
-    private Logger log = LoggerFactory.getLogger(HelloController.class);
 
-    @Autowired
-    private HelloFeign helloFeign;
+  private Logger log = LoggerFactory.getLogger(HelloController.class);
 
-    @GetMapping("/info")
-    public String hello(@RequestParam String name) {
-        log.info("HelloFeign instance is {}", helloFeign.getClass().getName());
-        return helloFeign.hello(name);
-    }
+  @Autowired
+  private HelloFeign helloFeign;
+
+  @GetMapping("/info")
+  public String hello(@RequestParam String name) {
+    log.info("HelloFeign instance is {}", helloFeign.getClass().getName());
+    return helloFeign.hello(name);
+  }
 }
