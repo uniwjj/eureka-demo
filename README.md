@@ -18,10 +18,16 @@
 服务消费端增加了熔断机制，如果服务提供端宕机，消费端在访问时会执行熔断流程。
 
 #### 2.3配置中心服务端
-
+配置中心服务端也使用了注册中心实现服务的高可靠，运行 ConfigServerApplication 会启动配置中心服务端服务，占用9004端口，同时会从配置的 git 仓库 https://github.com/uniwjj/eureka-demo 的 config-repo 文件夹拉取配置，配置中心客户端可以从配置中心服务端拉取所有配置信息。
 
 #### 2.4配置中心客户端
-
+配置中心客户端也使用了注册中心实现服务的高可靠，运行 ConfigClientApplication 会启动配置中心客户端服务，占用9005端口，同时会从配置中心服务端拉取配置对本地的配置进行覆盖，访问 http://localhost:9005/hello/info 会返回相应结果。
 
 #### 2.5网关
+网关服务用于路由及过滤器功能，启动 ApiGatewayApplication 服务，占用9006端口，会自动发现注册中心上的服务，比如上述的 EurekaClientProviderApplication 和 EurekaClientConsumerApplication，Zuul 会自动创建下面两个路由规则：
+- 转发到eureka-client-producer服务的请求规则为：/eureka-client-producer/**
+- 转发到eureka-client-consumer服务的请求规则为：/eureka-client-consumer/**
 
+调用 http://localhost:9002/eureka-client-consumer/hello/info?name=Tom 会得到相同的访问结果。
+
+当然，网关也增加过滤器功能，在访问时，如果不增加token作为请求参数，会被过滤器拦截，并报401，响应 token is blank。
