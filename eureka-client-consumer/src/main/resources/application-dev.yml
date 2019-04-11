@@ -5,10 +5,10 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:9000/eureka/
+      defaultZone: http://localhost:16000/eureka/
 
 server:
-  port: 9003
+  port: 16003
 
 feign:
   hystrix:
